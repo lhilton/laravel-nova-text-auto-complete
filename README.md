@@ -25,7 +25,7 @@ use Lhilton\TextAutoComplete\TextAutoComplete;
 public function fields(Request $request)
 {
     return [
-        TextAutoComplete::('Regions')->items([
+        TextAutoComplete::make('Regions')->items([
             'Alabama',
             'Alaska',
             'Arizona',
@@ -48,7 +48,7 @@ use Lhilton\TextAutoComplete\TextAutoComplete;
 public function fields(Request $request)
 {
     return [
-        TextAutoComplete::('Regions')->items(
+        TextAutoComplete::make('Regions')->items(
             User::select('title')
                 ->distinct()
                 ->get()
